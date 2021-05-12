@@ -7,6 +7,7 @@ const inputButton = document.querySelector('.js-button');
 const trackInfo = document.querySelector('.js-track');
 const triedNumber= document.querySelector('.js-tried');
 
+
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
    }
@@ -21,7 +22,9 @@ function compareNumber (){
     console.log(inputValue, randomNumber)
 
     if (inputValue === randomNumber){
+
 trackInfo.innerHTML = 'Enhorabuena!! has ganado! =)'
+
     }
     else if (inputValue > randomNumber && inputValue <= 100){
         trackInfo.innerHTML = 'WOW, ¡te has pasado!'
