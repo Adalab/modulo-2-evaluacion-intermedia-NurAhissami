@@ -24,6 +24,7 @@
     border: none;
     background-color: lightgrey;
     margin-bottom: 10px;
+    padding-left: 15px;
   }
   &__button {
     width: 100px;
@@ -52,4 +53,7 @@
 
 .ColorsWIN {
   background-color: #f0d636;
+}
+.colordisable {
+  background-color: grey;
 }

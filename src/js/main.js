@@ -23,8 +23,10 @@ function compareNumber (){
 
     if (inputValue === randomNumber){
 
-trackInfo.innerHTML = 'Enhorabuena!! has ganado! =)'
-
+    trackInfo.innerHTML = 'Enhorabuena!! has ganado! =) ¡recarga la página y juega otra vez!';
+    inputButton.setAttribute('disabled', false);
+    inputButton.classList.add('colordisable')
+    
     }
     else if (inputValue > randomNumber && inputValue <= 100){
         trackInfo.innerHTML = 'WOW, ¡te has pasado!'
