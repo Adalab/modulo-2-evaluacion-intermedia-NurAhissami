@@ -1,3 +1,37 @@
 'use strict';
 
 console.log('>> Ready :)');
+
+const inputNumber = document.querySelector('.js-input');
+const inputButton = document.querySelector('.js-button');
+const trackInfo = document.querySelector('.js-track');
+const triedNumber= document.querySelector('.js-tried');
+
+function getRandomNumber(max) {
+    return Math.ceil(Math.random() * max);
+   }
+
+const randomNumber = getRandomNumber(100);
+console.log(randomNumber)
+
+
+function compareNumber (){
+   
+    const inputValue = parseInt(inputNumber.value);
+    console.log(inputValue, randomNumber)
+
+    if (inputValue === randomNumber){
+trackInfo.innerHTML = 'Enhorabuena!! has ganado! =)'
+    }
+    else if (inputValue > randomNumber && inputValue <= 100){
+        trackInfo.innerHTML = 'WOW, ¡te has pasado!'
+    }
+    else if (inputValue < randomNumber && inputValue >= 0){
+        trackInfo.innerHTML = '¡te has quedado corta!'
+    }
+    else if (inputValue > 100 || inputValue < 0){
+        trackInfo.innerHTML = 'escoge un número de 0 a 100 ;)'
+    }
+}
+
+inputButton.addEventListener('click', compareNumber)
