@@ -34,4 +34,18 @@ trackInfo.innerHTML = 'Enhorabuena!! has ganado! =)'
     }
 }
 
-inputButton.addEventListener('click', compareNumber)
+let counter = 0;
+
+function clickNumber (){
+counter += 1;
+triedNumber.innerHTML = `Número de intentos: ${counter}`;
+}
+
+
+function clickAndCompare (){
+    clickNumber ()
+    compareNumber ()
+
+}
+
+inputButton.addEventListener('click', clickAndCompare)
